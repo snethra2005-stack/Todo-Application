@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nethra & Madhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <div class="sky" id="sky"></div>
+    <div class="app">
+        <div class="journey" id="journey">
+            <div class="stop current" data-i="0"></div>
+            <div class="leg" data-i="0"></div>
+            <div class="stop" data-i="1"></div>
+            <div class="leg" data-i="1"></div>
+            <div class="stop" data-i="2"></div>
+        </div>
+        <div class="stage">
+             <section class="page active" data-page="0">
+                <p class="eyebrow red">Our Chinna Surprice Thanga Pulla 😜</p>
+                <h1 class="display names"><span class="madhan script">Madhan</span><span class="amp">&amp;</span><span class="nethra script">Nethra</span></h1>
+                <div class="divider"></div>
+                 <p class="body-text editable" contenteditable="true" spellcheck="false">
+                    Idhu nan unnoda Birthday ku ready pannum nuh nenachae ana mudiyama poiduchi nan apovae yella class um olunga paathu irundha apovae mudichi iruppaen ana mudikkala
+                     ipo than mudichae athan late uh 🥲. Sari atan ipo Create pannitaen la 🥰 unnala than 🫵 🙈 remining next page la irukku! adulam pakkanum na 👇
+                </p>
+                <div class="nav-row">
+                <button class="btn primary" onclick="goTo(1)">ennoda Heart Open pannu ❤️ 👉</button>
+             </section>
+             <!-- PAGE 2 -->
+             <section class="page" data-page="1">
+               <div class="quiz-scope">
+
+                <header>
+                  <span class="eyebrow">Oru chinna Test vakkurae, Pass pannu</span>
+                  <h1>Pakkurae<br>Unakku enna therinji irukkunu</h1>
+                  <p class="sub">Five questions irukku porumaiya answer pannu</p>
+                </header>
+
+                <main>
+
+                  <!-- Question 1 -->
+                  <section class="card active" id="q1">
+                    <span class="q-index">Question 01</span>
+                    <p class="q-text">Yara Indha World layae Romba Pudikkum enakku? 😃</p>
+                    <div class="choices">
+                      <button class="choice-btn" data-answer="right">Murugan</button>
+                      <button class="choice-btn" data-answer="wrong">Madhan</button>
+                    </div>
+                    <div class="feedback" id="fb1"></div>
+                    <button class="next-btn" id="next1">Next question →</button>
+                  </section>
+
+                  <!-- Question 2 -->
+                  <section class="card" id="q2">
+                    <span class="q-index">Question 02</span>
+                    <p class="q-text">Indha World la yae ennaku mattum than aven yaru adhu? 🤍</p>
+                    <div class="text-row">
+                      <input type="text" id="input2" placeholder="Unakku enna thonudo type pannu">
+                      <button class="submit-btn" data-target="2">Submit</button>
+                    </div>
+                    <div class="feedback" id="fb2"></div>
+                    <button class="next-btn" id="next2">Next question →</button>
+                  </section>
+
+                  <!-- Question 3 -->
+                  <section class="card" id="q3">
+                    <span class="q-index">Question 03</span>
+                    <p class="q-text">Ennaku eppavumae Periya Supporter Yaru? 🤍</p>
+                    <div class="text-row">
+                      <input type="text" id="input3" placeholder="Unakku enna thonudo type pannu">
+                      <button class="submit-btn" data-target="3">Submit</button>
+                    </div>
+                    <div class="feedback" id="fb3"></div>
+                    <button class="next-btn" id="next3">Next question →</button>
+                  </section>
+
+                  <!-- Question 4 -->
+                  <section class="card" id="q4">
+                    <span class="q-index">Question 04</span>
+                    <p class="q-text">Enakku Romba Pudichae Food edu?</p>
+                    <div class="text-row">
+                      <input type="text" id="input4" placeholder="type your answer...">
+                      <button class="submit-btn" data-target="4">Submit</button>
+                    </div>
+                    <div class="feedback" id="fb4"></div>
+                    <button class="next-btn" id="next4">Next question →</button>
+                  </section>
+
+                  <!-- Question 5 -->
+                  <section class="card" id="q5">
+                    <span class="q-index">Question 05</span>
+                    <p class="q-text">Ennoda favourite place?</p>
+                    <div class="choices">
+                      <button class="choice-btn" data-answer="wrong">Paris</button>
+                      <button class="choice-btn" data-answer="wrong">London</button>
+                      <button class="choice-btn" data-answer="right">Madhan's chest</button>
+                    </div>
+                    <div class="feedback" id="fb5"></div>
+                    <button class="next-btn" id="next5">See the end →</button>
+                  </section>
+
+                  <!-- Finale -->
+                  <section class="card finale" id="finale">
+                    <div class="heart">❤️</div>
+                    <p>Ennoda yella Question kum correct ah Answer panni ennoda Heart ah thiruiditae Madhan.<br>Vaa enna Katti Pudichiko🫂.</p>
+                  </section>
+
+                      <div class="nav-row">
+        <button class="back-link" onclick="goTo(0)">← back</button>
+        <button class="btn primary" onclick="goTo(2)">Oru Paeriya Question irukku →</button>
+      </div>
+
+                </main>
+
+               </div>
+             </section>
+             <section class="page" data-page="2">
+      <div class="road">
+        <svg viewBox="0 0 380 14" preserveAspectRatio="none">
+          <line x1="0" y1="7" x2="380" y2="7" stroke="rgba(255,255,255,0.25)" stroke-width="2" stroke-dasharray="10 8"/>
+          <circle cx="14" cy="7" r="5" fill="#E892A6"/>
+          <circle cx="190" cy="7" r="5" fill="#E8C77E"/>
+          <circle cx="366" cy="7" r="6" fill="#8FC7A8"/>
+        </svg>
+      </div>
+      <p class="eyebrow red">THE QUESTION</p>
+      <p class="question">
+        “Idhae Maari <span class="accent">Eppayum Enkuda Travel Panna Ready ah Madhan</span> — Life Fulla, Kai kothukituu Polama🫴?”
+      </p>
+
+      <div class="answer-row" id="answerRow">
+        <button class="btn primary" id="yesBtn" onclick="celebrate()">Eppayumae Nethra</button>
+        <button class="btn" id="noBtn" onmouseenter="dodge()" onclick="dodge()">Illa Yoikkuraen</button>
+      </div>
+
+      <div class="message-card">
+        <span class="label">A message for you</span>
+        <h2 contenteditable="true" spellcheck="false">I Love You Madhan ❤️</h2>
+        <p contenteditable="true" spellcheck="false">Enna Kalyanam Panniko💍</p>
+      </div>
+
+      <div class="nav-row">
+        <button class="back-link" onclick="goTo(1)">← back</button>
+      </div>
+    </section>
+        </div>
+    <footer class="signoff">made with love · Nethra &amp; Madhan</footer>
+    </div>
+    <div class="celebration" id="celebration">
+  <div id="leafLayer"></div>
+  <h2>Forever</h2>
+  <p>Inemae namakku vera vera Road lam illa Madhan orae Road uh than Neeyum Nanum Travel Pannalam.
+     Eppayum Unakku edu Pudikkido adu mattum pannu eppayum unkuda nan iruppae.Shivan ku Parvathi Maari</p>
+  <p>வேலுண்டு வினையில்லை மயிலுண்டு பயமில்லை குகனுண்டு குறையில்லை கந்தனுண்டு கவலையில்லை <br> ஓம் சரவணபவ! <br>ஓம் சரவணபவ! <br>ஓம் சரவணபவ!</p>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
